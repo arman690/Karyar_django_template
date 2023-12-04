@@ -1,0 +1,45 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">Task Summary</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header bg-success text-white">
+                Completed Tasks
+              </div>
+              <div class="card-body">
+                <p class="lead">{{ completed_tasks }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header bg-warning text-white">
+                Incomplete Tasks
+              </div>
+              <div class="card-body">
+                <p class="lead">{{ incomplete_tasks }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header bg-info text-white">
+                Total Tasks
+              </div>
+              <div class="card-body">
+                <p class="lead">{{ total_tasks }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
