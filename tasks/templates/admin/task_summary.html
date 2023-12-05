@@ -1,0 +1,16 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <div class="module">
+    <table summary="{% blocktrans %}Task Summary{% endblocktrans %}">
+      <tr>
+        <td><strong>{% blocktrans %}Completed Tasks{% endblocktrans %}</strong></td>
+        <td>{{ completed_tasks }}</td>
+      </tr>
+      <tr>
+        <td><strong>{% blocktrans %}Incomplete Tasks{% endblocktrans %}</strong></td>
+        <td>{{ incomplete_tasks }}</td>
+      </tr>
+    </table>
+  </div>
+{% endblock %}

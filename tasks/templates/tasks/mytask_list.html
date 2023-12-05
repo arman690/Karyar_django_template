@@ -1,0 +1,12 @@
+{% block content %}
+  <ul>
+    {% for task in object_list %}
+      <li>
+        <strong>Title:</strong> {{ task.title }}<br>
+        <strong>Description:</strong> {{ task.description }}<br>
+        <strong>Due Date:</strong> {{ task.due_date }}<br>
+        <strong>Completed:</strong> {% if task.completed %}Yes{% else %}No{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
